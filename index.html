@@ -4,67 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gomathi M P - Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
         }
         .resume-container {
-            max-width: 800px;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin: auto;
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
         header {
+            background: linear-gradient(135deg, #0073b1, #004d7a);
+            color: #fff;
+            padding: 30px;
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ddd;
         }
         header h1 {
-            color: #333;
-            font-size: 28px;
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0;
         }
         header h2 {
-            color: #777;
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: 400;
+            margin: 10px 0;
+        }
+        header p {
+            font-size: 16px;
+            margin: 5px 0;
         }
         header p a {
-            color: #0073b1;
+            color: #fff;
             text-decoration: none;
+            font-weight: 500;
+        }
+        header p a:hover {
+            text-decoration: underline;
         }
         section {
-            margin-top: 20px;
+            padding: 30px;
         }
         h3 {
-            color: #333;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #0073b1;
+            border-bottom: 2px solid #0073b1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .experience, .projects, .education, .skills, .certifications, .soft-skills {
+            margin-bottom: 30px;
         }
         .experience h4, .projects h4 {
-            color: #0073b1;
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin: 15px 0 5px;
         }
-        ul {
-            padding-left: 20px;
+        .experience p, .projects p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .projects .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .projects .project-item {
+            flex: 1 1 calc(33.333% - 20px);
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .skills .skill-item {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #0073b1;
+            color: #fff;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .skills .skill-item i {
+            margin-right: 8px;
+        }
+        .certifications ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .certifications ul li {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .certifications ul li i {
+            color: #0073b1;
+            margin-right: 10px;
+        }
+        .soft-skills p {
+            font-size: 14px;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .projects .project-item {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="resume-container">
+        <!-- Header Section -->
         <header>
             <h1>GOMATHI M P</h1>
             <h2>Data Analyst</h2>
-            <p>📞 7397121504 | ✉ gomathiprakash1115@gmail.com | 🔗 <a href="https://www.linkedin.com/in/gomathi-mp-34b353292">LinkedIn</a> | 🔗 <a href="https://github.com/Gomathi1115">GitHub</a></p>
+            <p><i class="fas fa-phone"></i> 7397121504 | <i class="fas fa-envelope"></i> gomathiprakash1115@gmail.com | <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/gomathi-mp-34b353292">LinkedIn</a> | <i class="fab fa-github"></i> <a href="https://github.com/Gomathi1115">GitHub</a></p>
         </header>
-        
-        <section>
-            <h3>WORK EXPERIENCE</h3>
-            <div class="experience">
+
+        <!-- Work Experience Section -->
+        <section class="experience">
+            <h3><i class="fas fa-briefcase"></i> WORK EXPERIENCE</h3>
+            <div>
                 <h4>Data Science Intern - Prompt Infotech (Aug 2024)</h4>
                 <p>Assisted in data preprocessing, analysis, and visualization. Utilized Python and SQL to derive insights from datasets.</p>
                 
@@ -72,52 +144,73 @@
                 <p>Worked on data visualization and statistical analysis using Python and Tableau. Helped optimize data-driven business strategies.</p>
             </div>
         </section>
-        
-        <section>
-            <h3>PROJECTS</h3>
-            <div class="projects">
-                <h4>Customer Churn Prediction (Feb 2024)</h4>
-                <p>Languages Used: Python, Scikit-learn</p>
-                <p>Built a predictive model using machine learning techniques and utilized data visualization to understand key churn factors.</p>
-                
-                <h4>Hospital Management System (Apr 2023 - May 2023)</h4>
-                <p>Languages Used: Java, Eclipse</p>
-                <p>Designed a system for efficient patient record management and hospital operations.</p>
-                
-                <h4>Stock Price Prediction (Mar 2024)</h4>
-                <p>Languages Used: Python, TensorFlow</p>
-                <p>Developed a time-series forecasting model using LSTM neural networks for improved accuracy.</p>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h3><i class="fas fa-project-diagram"></i> PROJECTS</h3>
+            <div class="project-container">
+                <div class="project-item">
+                    <h4>Customer Churn Prediction (Feb 2024)</h4>
+                    <p><strong>Languages Used:</strong> Python, Scikit-learn</p>
+                    <p>Built a predictive model using machine learning techniques and utilized data visualization to understand key churn factors.</p>
+                </div>
+                <div class="project-item">
+                    <h4>Hospital Management System (Apr 2023 - May 2023)</h4>
+                    <p><strong>Languages Used:</strong> Java, Eclipse</p>
+                    <p>Designed a system for efficient patient record management and hospital operations.</p>
+                </div>
+                <div class="project-item">
+                    <h4>Stock Price Prediction (Mar 2024)</h4>
+                    <p><strong>Languages Used:</strong> Python, TensorFlow</p>
+                    <p>Developed a time-series forecasting model using LSTM neural networks for improved accuracy.</p>
+                </div>
             </div>
         </section>
-        
-        <section>
-            <h3>EDUCATION</h3>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h3><i class="fas fa-graduation-cap"></i> EDUCATION</h3>
             <p><strong>B.Tech – Information Technology (Pre-final Year)</strong> - Anna University (2022-2026) | CGPA: 8.16</p>
             <p><strong>HSC</strong> - KSR Matric Public School (2021-2022) | Percentage: 73.5%</p>
             <p><strong>SSLC</strong> - Little Flower Matriculation School (2019-2020) | Percentage: 96.2%</p>
         </section>
-        
-        <section>
-            <h3>TECHNICAL SKILLS</h3>
-            <p>Python, R, CSS, Java, HTML, SQL, Tableau, Power BI, NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow, AWS, Google Cloud, Hadoop</p>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h3><i class="fas fa-tools"></i> TECHNICAL SKILLS</h3>
+            <div>
+                <span class="skill-item"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-item"><i class="fas fa-database"></i> SQL</span>
+                <span class="skill-item"><i class="fab fa-java"></i> Java</span>
+                <span class="skill-item"><i class="fab fa-html5"></i> HTML</span>
+                <span class="skill-item"><i class="fab fa-css3-alt"></i> CSS</span>
+                <span class="skill-item"><i class="fas fa-chart-line"></i> Tableau</span>
+                <span class="skill-item"><i class="fas fa-cloud"></i> AWS</span>
+                <span class="skill-item"><i class="fas fa-brain"></i> TensorFlow</span>
+            </div>
         </section>
-        
-        <section>
-            <h3>CERTIFICATIONS</h3>
+
+        <!-- Certifications Section -->
+        <section class="certifications">
+            <h3><i class="fas fa-certificate"></i> CERTIFICATIONS</h3>
             <ul>
-                <li>Python Bootcamp (Lernx)</li>
-                <li>Introduction to Artificial Intelligence (Infosys)</li>
-                <li>Data Analytics (NoviTech)</li>
-                <li>Introduction to Deep Learning (Infosys)</li>
-                <li>Python (LetsUpgrade)</li>
-                <li>Data Analytics (Google)</li>
+                <li><i class="fas fa-check-circle"></i> Python Bootcamp (Lernx)</li>
+                <li><i class="fas fa-check-circle"></i> Introduction to Artificial Intelligence (Infosys)</li>
+                <li><i class="fas fa-check-circle"></i> Data Analytics (NoviTech)</li>
+                <li><i class="fas fa-check-circle"></i> Introduction to Deep Learning (Infosys)</li>
+                <li><i class="fas fa-check-circle"></i> Python (LetsUpgrade)</li>
+                <li><i class="fas fa-check-circle"></i> Data Analytics (Google)</li>
             </ul>
         </section>
-        
-        <section>
-            <h3>SOFT SKILLS</h3>
+
+        <!-- Soft Skills Section -->
+        <section class="soft-skills">
+            <h3><i class="fas fa-comments"></i> SOFT SKILLS</h3>
             <p>Problem-solving, critical thinking, communication, teamwork, adaptability</p>
         </section>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
